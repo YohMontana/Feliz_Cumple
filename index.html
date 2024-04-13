@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Cumpleaños dedicar!</title>
+  <title>Cumpleaños de Susana</title>
   <link rel="stylesheet" href="./style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
 <body>
+  <div>
+    <!-- Audio con autoplay y mute por defecto, se desmuteará con interacción -->
+    <audio id="miAudio" src="cumple.mp3" preload="auto" autoplay muted></audio>
+    <canvas id="c"></canvas>
+    <p>Con mucho Amor, BY <a href="amarillas.html">JHANCARLO</a></p>
+  </div>
+  <script>
+    // Esperamos a que el documento esté completamente cargado
+    document.addEventListener('DOMContentLoaded', function() {
+        var miAudio = document.getElementById('miAudio');
 
-<canvas id=c></canvas>
-<p>Con mucho Amor <span>, BY <a href="https://encoded.pe">MABEL</a></span></p>
+        // Función para reproducir el audio
+        function playAudio() {
+            miAudio.muted = false;  // Desmuteamos el audio
+            miAudio.play();         // Intentamos reproducir el audio
+        }
 
-  <script  src="./script.js"></script>
+        // Añadimos evento de clic para todo el cuerpo del documento
+        document.body.addEventListener('click', playAudio, { once: true });
 
+        // Opcional: reproducir automáticamente al hacer scroll
+        window.addEventListener('scroll', playAudio, { once: true });
+    });
+  </script>
+  <script src="./script.js"></script>
 </body>
-
 </html>
-

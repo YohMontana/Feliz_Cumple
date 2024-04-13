@@ -1,5 +1,4 @@
 /* BY ENCODEDMABEL */
-
 var w = c.width = window.innerWidth,
 		h = c.height = window.innerHeight,
 		ctx = c.getContext( '2d' ),
@@ -8,7 +7,7 @@ var w = c.width = window.innerWidth,
 		hh = h / 2,
 		
 		opts = {
-			strings: [ 'FELIZ', 'CUMPLEAÑOS', ' AMOR!' ],
+			strings: [ 'FELIZ', 'CUMPLEAÑOS', ' SUSANA!' ],
 			charSize: 30,
 			charSpacing: 35,
 			lineHeight: 40,
